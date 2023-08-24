@@ -4,6 +4,7 @@ import LogoO from '../../assets/images/logo_o.png'
 import LogoSubtitle from '../../assets/images/logo_sub.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook, faGithub, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 
 const Sidebar = () => (
@@ -23,6 +24,40 @@ const Sidebar = () => (
                 <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
             </NavLink>
         </nav>
+        <ul>
+            <li>
+                <a 
+                target='_blank' 
+                rel='noreferrer' 
+                href='https://www.linkedin.com/in/octaviovsanchez/'>
+                    <FontAwesomeIcon icon={faLinkedin} color='#4d4d4e'/>
+                </a>
+            </li>
+            <li>
+                <a 
+                target='_blank' 
+                rel='noreferrer' 
+                href='https://github.com/babotavo419'>
+                    <FontAwesomeIcon icon={faGithub} color='#4d4d4e'/>
+                </a>
+            </li>
+            <li>
+                <a 
+                target='_blank' 
+                rel='noreferrer' 
+                href='https://www.facebook.com/profile.php?id=100091293243371'>
+                    <FontAwesomeIcon icon={faFacebook} color='#4d4d4e'/>
+                </a>
+            </li>
+            <li>
+                <a 
+                target='_blank' 
+                rel='noreferrer' 
+                href='https://www.youtube.com/channel/UCsB0QyKYCrPoP0rmoqi99-w'>
+                    <FontAwesomeIcon icon={faYoutube} color='#4d4d4e'/>
+                </a>
+            </li>
+        </ul>
     </div>
 )
 
