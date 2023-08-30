@@ -1,5 +1,5 @@
 .nav-bar {
-    background: 181818;
+    background: #242424;
     width: 60px;
     height: 100%;
     position: absolute;
@@ -47,19 +47,20 @@
         }
 
         &:hover {
-            color: #430402;
+            color:#430402 ;       
 
             svg {
                 opacity: 0;
             }
 
-            &::after {
+            &:after {
                 opacity: 1;
             }
         }
-            &::after {
+            &:after {
                 content: '';
                 font-size: 9px;
+                font-weight: bold;
                 letter-spacing: 2px;
                 position: absolute;
                 bottom: 0;
@@ -67,11 +68,12 @@
                 width: 100%;
                 text-align: center;
                 opacity: 0;
+                -webkit-transition: all 0.3s ease-out;
                 transition: all 0.3s ease-out;
             }
 
                 &:first-child {
-                    &::after{
+                    &:after{
                         content: 'HOME';
                     }
                 }
@@ -87,6 +89,12 @@
                         content:'CONTACT'
                     }
                 }
+
+                a.portfolio-link {
+                    &:after {
+                      content: 'PORTFOLIO';
+                    }
+                  }
 
                 a.active {
                     svg {
@@ -111,11 +119,17 @@
                         display: block;
                         font-size: 15px;
                         line-height: 16px;
+                        color: #4d4d4e;
+                        }
 
-                        &:hover svg {
-                            color: #430402;
+                    &:hover svg {
+                        .anchor-icon {
+                        color: #430402;
                         }
                     }
+                    
                 }
             }
         }
+
+        
