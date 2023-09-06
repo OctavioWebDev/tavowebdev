@@ -11,25 +11,29 @@ const Contact = () => {
   const form = useRef()
 
   useEffect(() => {
-    return setTimeout(() => {
-      setLetterClass('text-animate-hover')
-    }, 3000)
+    const timer = setTimeout(() => {
+      setLetterClass('text-animate-hover');
+    }, 3000);
+
+    return () => clearTimeout(timer);
 }, []);
 
   const sendEmail = (e) => {
     e.preventDefault()
 
     emailjs
-      .sendForm('gmail', 'template_o4w6x4a', form.current, 'your-token')
-      .then(
+    .sendForm('service_8rksp3t', 'template_o4w6x4a', form.current, 'gXzVIl4DI-2qHQmWy')
+    .then(
         () => {
-          alert('Message successfully sent!')
-          window.location.reload(false)
+            alert('Message successfully sent!');
+            window.location.reload(false);
         },
-        () => {
-          alert('Failed to send the message, please try again')
+        (error) => {
+          console.error("EmailJS error:", error);
+            alert('Failed to send the message, please try again');
         }
-      )
+    )
+
   }
 
   return (
