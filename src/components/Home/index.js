@@ -4,7 +4,7 @@ import Loader from 'react-loaders'
 import './index.scss';
 import { useEffect, useState } from 'react';
 import AnimatedLetters from '../AnimatedLetters';
-import Logo  from './Logo';
+
 
 
 const Home = () => {
@@ -45,7 +45,6 @@ const Home = () => {
                     <h2>Fullstack Developer / JavaScript</h2>
                     <Link to="/contact" className="flat-button">CONTACT ME</Link>
                 </div>
-                <Logo/>
             </div>
             <Loader type="pacman" />
         </>
