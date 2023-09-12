@@ -36,18 +36,17 @@ const About = () => {
             />
           </h1>
           <p>
-            I'm a very ambitious front-end developer looking for a role in an
-            established IT company with the opportunity to work with the latest
-            technologies on challenging and diverse projects.
+            I'm a freshman fullstack developer from Ohio. I started on my journey about
+            a year ago. I have pass experience in many diffrent fields of work. But, this 
+            last year has taught me a lot about the most important aspects of a fullstack 
+            development. I am now ready to take on a new challenge.  
           </p>
           <p align="LEFT">
-            I'm quiet confident, naturally curious, and perpetually working on
-            improving my chops one design problem at a time.
+            I'm naturally curious, and always working on improving my skills and knowledge. 
+            When I'm not coding, I enjoy spending time with my wife, children, and the church. 
           </p>
           <p>
-            If I need to define myself in one sentence that would be a family
-            person, father of a beautiful daughter, a sports fanatic,
-            photography enthusiast, and tech-obsessed!!!
+            My daily disciplines include prayer, strength training, walking, and reading.
           </p>
         </div>
 
