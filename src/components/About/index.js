@@ -37,7 +37,7 @@ const About = () => {
           </h1>
           <p>
             I'm a freshman fullstack developer from Ohio. I started on my journey about
-            a year ago. I have pass experience in many diffrent fields of work. But, this 
+            a year ago. I have past experience in many diffrent fields of work. But, this 
             last year has taught me a lot about the most important aspects of a fullstack 
             development. I am now ready to take on a new challenge.  
           </p>
