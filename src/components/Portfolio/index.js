@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Loader from "react-loaders";
 import AnimatedLetters from "../AnimatedLetters";
 import "./index.scss";
+import { getStorage, ref, getDownloadURL } from "firebase/storage";
 import { getDocs, collection } from 'firebase/firestore';
 import { db } from '../../firebase';
 
@@ -23,10 +24,24 @@ const Portfolio = () => {
         getPortfolio();
     }, []);
 
-    const getPortfolio = async () => {
-        const querySnapshot = await getDocs(collection(db, 'portfolio'));
-        setPortfolio(querySnapshot.docs.map((doc) => doc.data()));
-    }
+    
+const getPortfolio = async () => {
+    const storage = getStorage();
+    const querySnapshot = await getDocs(collection(db, 'Portfolio')); 
+    const portfolioData = querySnapshot.docs.map(doc => doc.data());
+    const enrichedPortfolio = await Promise.all(portfolioData.map(async (port) => {
+        const storageRef = ref(storage, port.image);
+        try {
+            const url = await getDownloadURL(storageRef);
+            return { ...port, imageUrl: url }; 
+        } catch (error) {
+            console.error("Error getting download URL for:", port.image, error);
+            return port;  
+        }
+    }));
+    
+    setPortfolio(enrichedPortfolio);
+}
 
     const renderPortfolio = (portfolio) => {
         return (
@@ -36,7 +51,7 @@ const Portfolio = () => {
                         return (
                             <div className="image-box" key={idx}>
                                 <img 
-                                src={port.image}
+                                src={port.imageUrl}
                                 className="portfolio-image"
                                 alt="portfolio" />
                                 <div className="content">
