@@ -17,7 +17,8 @@ import {
     faFacebook, 
     faGithub, 
     faLinkedin, 
-    faYoutube 
+    faYoutube,
+    faXTwitter 
 } from '@fortawesome/free-brands-svg-icons';
 
 
@@ -109,6 +110,14 @@ const Sidebar = () => {
                 rel='noreferrer' 
                 href='https://www.youtube.com/channel/UCsB0QyKYCrPoP0rmoqi99-w'>
                     <FontAwesomeIcon icon={faYoutube} color='#4d4d4e'/>
+                </a>
+            </li>
+            <li>
+                <a 
+                target='_blank' 
+                rel='noreferrer' 
+                href='https://twitter.com/octavio31848'>
+                    <FontAwesomeIcon icon={faXTwitter} color='#4d4d4e'/>
                 </a>
             </li>
         </ul>
